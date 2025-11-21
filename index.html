@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BankSphere - Your Trusted Banking Partner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+        .header {
+            background-color: #004d40; /* Dark Teal */
+            color: #ffffff;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header h1 {
+            margin: 0;
+            font-weight: 700;
+        }
+        .container {
+            max-width: 960px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .section {
+            background-color: #ffffff;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+        .section h2 {
+            color: #004d40; /* Dark Teal */
+            margin-top: 0;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .feature-item {
+            background-color: #e0f2f1; /* Light Teal */
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .feature-item h3 {
+            color: #004d40;
+            margin-top: 0;
+            font-weight: 600;
+        }
+        .feature-item p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+        .footer {
+            text-align: center;
+            padding: 2rem 0;
+            background-color: #333;
+            color: #ffffff;
+            margin-top: 2rem;
+        }
+        .footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        /* Chatbot Icon Placeholder (for visual consistency) */
+        .chatbot-placeholder {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #007bff; /* Blue for chatbot */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            z-index: 1000;
+            pointer-events: none; /* Make it not clickable as Voiceflow will replace it */
+        }
+        .chatbot-placeholder::before {
+            content: '💬'; /* Chat bubble emoji */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>BankSphere</h1>
+        <p>Your Trusted Banking Partner</p>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>Welcome to BankSphere!</h2>
+            <p>At BankSphere, we are committed to providing you with secure, convenient, and innovative banking solutions. Whether you're saving for the future, managing daily expenses, or planning investments, we are here to support your financial journey.</p>
+        </div>
+
+        <div class="section">
+            <h2>Our Services</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>Savings Accounts</h3>
+                    <p>Grow your money with attractive interest rates and flexible options.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Loans & Credit</h3>
+                    <p>Personal loans, home loans, and credit cards tailored to your needs.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Online Banking</h3>
+                    <p>Manage your finances anytime, anywhere with our secure online platform.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Investment Solutions</h3>
+                    <p>Expert advice and tools to help you achieve your financial goals.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Need Assistance?</h2>
+            <p>Our virtual assistant is here to help you 24/7. Ask about your account balance, how to open a new account, or any other banking query!</p>
+            <p>Just click on the chat icon at the bottom right corner of your screen.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 BankSphere. All rights reserved.</p>
+        <p>Disclaimer: This is a dummy bank website for demonstration purposes only.</p>
+    </div>
+
+    <div class="chatbot-placeholder"></div>
+	
+	<script type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '692006bd9bfdf98ace3e65cd' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production',
+          voice: {
+            url: "https://runtime-api.voiceflow.com"
+          }
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
+
+</body>
+</html>
